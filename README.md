@@ -1,6 +1,6 @@
 # 即时通信系统 Instant messaging system
 
-![](D:\Go Project\src\Instant messaging system\Overall Architecture.png)
+![](Overall Architecture.png)
 
 ## 版本迭代
 
@@ -25,8 +25,6 @@
     - func (this *Server) Handler(conn net.Conn)：处理链接业务
 
 ## 版本二：用户上线功能
-
-![image-20231120021215663](C:\Users\Yining\AppData\Roaming\Typora\typora-user-images\image-20231120021215663.png)
 
 - user.go
   - user类型
