@@ -1,6 +1,6 @@
 # 即时通信系统 Instant messaging system
 
-![image-20231119224420622](C:\Users\Yining\AppData\Roaming\Typora\typora-user-images\image-20231119224420622.png)
+![](D:\Go Project\src\Instant messaging system\Overall Architecture.png)
 
 ## 版本迭代
 
@@ -56,4 +56,32 @@
   - 将之前user的业务进行替换
 
 ## 版本五：在线用户查询
+
+- user.go
+  - 提供SendMsg向对象客户端发送消息API
+  - 在HandleMessage()方法中，加上对"who"指令的处理，返回在线用户信息
+
+## 版本六：修改用户名
+
+消息格式"rename|Bob"
+
+- user.go
+  - 在HandleMessage()方法中，加上对"rename|Bob"指令的处理，返回在线用户信息
+
+## 版本七：超时强踢功能
+
+用户的任意消息表示用户为活跃，长时间不发消息认为超时，就要强制关闭用户连接
+
+- server.go
+  - 在用户的Handler() goroutine中，添加用户活跃channel，一旦有消息，就向该channel发送数据
+  - 在用户的Handler() goroutine中，添加定时器功能，超时则强踢
+
+## 版本八：私聊功能
+
+消息格式"to|username|message"
+
+- user.go
+  - 在HandleMessage()方法中，加上对"to|username|message"指令的处理，返回在线用户信息
+
+## 版本九：客户端实现
 
