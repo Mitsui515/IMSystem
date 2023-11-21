@@ -1,4 +1,4 @@
-# Instant Messaging System
+# IMSystem
 
 ## Project Description
 
@@ -17,7 +17,7 @@ This is a simple Instant Messaging System developed entirely in the Go programmi
 ## Directory Structure
 
 ```ps
-Instant messaging system/
+IMSystem/
 │
 ├── client.exe                # Client executable file
 ├── client.go                 # Client source code file
