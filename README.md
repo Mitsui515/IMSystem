@@ -83,3 +83,28 @@
 
 ## 版本九：客户端实现
 
+- client.go
+  - 客户端类型定义与连接
+    - client类型
+    - 创建client对象，同时连接服务器
+    - 主业务创建client对象
+  - 解析命令行
+    - init函数初始化命令行参数
+    - main函数解析命令行
+  - 菜单显示
+    - Client新增flag属性
+    - 新增menu()方法，获取用户输入的新模式
+    - 新增Run()主业务循环
+    - main中调用client.Run()
+  - 更新用户名
+    - 新增UpdateName()更新用户名
+    - 加入到Run业务分支中
+    - 添加处理server回执消息方法DealResponse()
+    - 开启一个goroutine，去承载DealResponse()
+  - 公聊模式
+    - 新增PublicChat()公聊模式业务
+    - 加入Run的分支中
+  - 私聊模式
+    - 查询当前都有哪些用户在线
+    - 提示用户选择一个用户进入私聊
+

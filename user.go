@@ -110,7 +110,7 @@ func (this *User) HandleMessage(msg string) {
 			this.SendMsg("No message content, please resend.\n")
 			return
 		}
-		remoteUser.SendMsg(this.Name + " said to you: " + content)
+		remoteUser.SendMsg(this.Name + " said to you: " + content + "\n")
 
 	} else {
 		this.server.BroadCast(this, msg)
