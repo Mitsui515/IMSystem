@@ -1,6 +1,6 @@
-# 即时通信系统 Instant messaging system
+# Instant Messaging System
 
-![Overall Architecture](./Overall Architecture.png)
+![Overall Architecture](./Overall_Architecture.png)
 
 ## 版本迭代
 
